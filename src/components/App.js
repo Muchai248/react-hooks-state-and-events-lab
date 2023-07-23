@@ -1,6 +1,7 @@
 import React from "react";
 import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
+import { useState, useEffect } from "react";
 
 function App() {
 
@@ -8,13 +9,14 @@ function App() {
   // this will be used for the Dark Mode Toggle feature
   const appClass = false ? "App dark" : "App light"
 
+
   return (
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
         <button>Dark Mode</button>
       </header>
-      <ShoppingList items={itemData} />
+      <ShoppingList items={itemData}/>
     </div>
   );
 }
